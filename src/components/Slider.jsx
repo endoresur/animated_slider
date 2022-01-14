@@ -1,11 +1,12 @@
 import React from 'react';
-import SliderItem from "./SliderItem";
+import SliderCard from "./SliderCard";
+import {SliderContainer} from "../styles/SlyderStyles";
 
 const Slider = () => {
     return (
-        <div>
-            <SliderItem/>
-        </div>
+        <SliderContainer>
+            <SliderCard/>
+        </SliderContainer>
     );
 };
 
