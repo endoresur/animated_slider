@@ -1,9 +1,10 @@
 import React from 'react';
 import {Card} from '../styles/SliderCardStyles'
 
-const SliderCard = () => {
+const SliderCard = (props) => {
+    const left = props.left;
     return (
-        <Card>
+        <Card left={left}>
             123
         </Card>
     );

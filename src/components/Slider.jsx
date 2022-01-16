@@ -6,6 +6,7 @@ const Slider = () => {
     return (
         <SliderContainer>
             <SliderCard/>
+            <SliderCard left={"10%"}/>
         </SliderContainer>
     );
 };
