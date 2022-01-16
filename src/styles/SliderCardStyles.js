@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 const position1 = '';
 const position2 = 'transform: translateX(-60%) perspective(1000px) rotateY(-70deg) translateX(-50%);';
