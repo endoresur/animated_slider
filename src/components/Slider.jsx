@@ -4,19 +4,21 @@ import {ButtonContainer, Container, SliderContainer} from "../styles/SlyderStyle
 
 const Slider = () => {
 
+    const cards = [<SliderCard/>,];
+
     let colors = ['yellow', 'blue', 'red', 'yellow', 'red', 'green'];
     let positions = ['move1-2', 'move2-3', 'move3-4', 'move4-5', 'move5-6', 'move6-1'];
 
     const [step, setStep] = useState(0);
-    const [animation, setAnimation] = useState([]);
+    const [animation, setAnimation] = useState(cards);
 
     function handleChange() {
         let mass = [];
-        for(let i = 0; i < colors.length; i++) {
-            let pos = (i + step)%6;
+        for (let i = 0; i < colors.length; i++) {
+            let pos = (i + step) % 6;
             mass.push(positions[pos]);
         }
-        setStep((step + 1)%6);
+        setStep((step + 1) % 6);
         setAnimation(mass);
     }
 
@@ -32,9 +34,9 @@ const Slider = () => {
             <SliderContainer>
                 {
                     animation.map(function (pos, i) {
-                        return <SliderCard move={pos} word={positions[i]}/>
-                    }
-                )}
+                            return <SliderCard move={pos} word={positions[i]}/>
+                        }
+                    )}
             </SliderContainer>
             <ButtonContainer>
                 <button onClick={handleChange} style={buttonStyle}>{'>'}</button>
