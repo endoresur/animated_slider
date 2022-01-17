@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import SliderCard from "./SliderCard";
-import {SliderContainer} from "../styles/SlyderStyles";
+import {ButtonContainer, Container, SliderContainer} from "../styles/SlyderStyles";
 
 const Slider = () => {
 
@@ -20,16 +20,26 @@ const Slider = () => {
         setAnimation(mass);
     }
 
+    const buttonStyle = {
+        border: 'none',
+    }
+
     return (
-        <div>
+        <Container>
+            <ButtonContainer>
+                <button onClick={handleChange} style={buttonStyle}>{'<'}</button>
+            </ButtonContainer>
             <SliderContainer>
                 {
-                    animation.map(position =>
-                    <SliderCard move={position}/>
+                    animation.map(function (pos, i) {
+                        return <SliderCard move={pos} word={positions[i]}/>
+                    }
                 )}
-                <button onClick={handleChange}>button</button>
             </SliderContainer>
-        </div>
+            <ButtonContainer>
+                <button onClick={handleChange} style={buttonStyle}>{'>'}</button>
+            </ButtonContainer>
+        </Container>
     );
 };
 

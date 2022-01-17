@@ -2,11 +2,12 @@ import React from 'react';
 import {Card} from '../styles/SliderCardStyles'
 
 const SliderCard = (props) => {
-    const color = props.color;
     const move = props.move;
+    const word = props.word;
+
     return (
-        <Card color={color} move={move}>
-            123
+        <Card move={move}>
+            <div>{word}</div>
         </Card>
     );
 };
