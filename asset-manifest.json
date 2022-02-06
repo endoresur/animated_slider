@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/animated-slider/static/css/main.566a1948.css",
+    "main.js": "/animated-slider/static/js/main.4deafeed.js",
+    "index.html": "/animated-slider/index.html",
+    "main.566a1948.css.map": "/animated-slider/static/css/main.566a1948.css.map",
+    "main.4deafeed.js.map": "/animated-slider/static/js/main.4deafeed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.566a1948.css",
+    "static/js/main.4deafeed.js"
+  ]
+}
