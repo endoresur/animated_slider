@@ -25,7 +25,7 @@ const Card = styled.div`
   height: 400px;
   border-radius: 10px;
 
-  background-color: ${props => props.color || 'yellow'};
+  background-color: ${props => props.color || 'red'};
   opacity: 0.65;
 
   margin: 0 auto;
@@ -33,7 +33,7 @@ const Card = styled.div`
   animation: ${props => props.move || 'move6-1'} 2s forwards;
 
 
-  @keyframes move1-2 {
+  @keyframes move1-2 {    
     from {${positions.position1}}
     to {${positions.position2}}
   }
